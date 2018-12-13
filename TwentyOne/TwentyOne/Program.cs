@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Casino;
+using Casino.TwentyOne;
 
 namespace TwentyOne
 {
@@ -10,6 +13,7 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Welcome to the Grand Hotel and Casino. Let's start by telling me your name.");
             string playerName = Console.ReadLine();
             Console.WriteLine("And how much money did you bring today?");
@@ -19,6 +23,13 @@ namespace TwentyOne
             if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "ya")
             {
                 Player player = new Player(playerName, bank);
+                player.Id = Guid.NewGuid();
+                using (StreamWriter file = new StreamWriter(@"C:\Users\ron_s\Documents\logs\log.txt", true))
+                {
+
+                    file.WriteLine(player.Id);
+
+                }
                 Game game = new TwentyOneGame();
                 game += player;
                 player.IsActivlyPlaying = true;
