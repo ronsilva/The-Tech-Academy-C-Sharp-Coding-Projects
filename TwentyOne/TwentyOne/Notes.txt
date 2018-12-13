@@ -1,0 +1,37 @@
+﻿//Lambda Expretions********************** 
+//int count = deck.Cards.Count(x => x.Face == Face.Ace);
+
+//List<Card> newList = deck.Cards.Where(x => x.Face == Face.King).ToList();
+
+//foreach(Card card in newList)
+//{
+//    Console.WriteLine(card.Face);
+//}
+
+//List<int> numberList = new List<int>() { 1, 2, 3, 535, 342, 23 };
+//int sum = numberList.Max();
+//Console.WriteLine(sum);
+//Lambda Expretions**********************
+
+//*******************************************************************
+//public Deck()
+//{
+//    Cards = new List<Card>();
+//    List<string> Suits = new List<string>() { "Clubs", "Hearts", "Diamonds", "Spades" };
+//    List<string> Faces = new List<string>()
+//    {
+//        "Two", "Three", "Four", "Five", "Six", "Seven",
+//        "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"
+//    };
+//    foreach (string face in Faces)
+//    {
+//        foreach (string suit in Suits)
+//        {
+//            Card card = new Card();
+//            card.Suit = suit;
+//            card.Face = face;
+//            Cards.Add(card);
+//        }
+//    }
+//}
+//***********************************************************************
